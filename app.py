@@ -65,5 +65,4 @@ def error404(error):
     
 with open("information.json") as secretinformation:
     data = json.load(secretinformation)
-#run(host=data.get("webserver")[0:data.get("webserver").find(":")], port=os.environ.get('PORT', 5000), debug=True)
-run(host=data.get("webserver")[0:data.get("webserver").find(":")], port=data.get("webserver")[data.get("webserver").find(":")+1: len(data.get("webserver"))], debug=True)
+run(host=data.get("webserver")[0:data.get("webserver").find(":")], port=os.environ.get('PORT', 5000), debug=True)
