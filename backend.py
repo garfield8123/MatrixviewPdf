@@ -29,7 +29,7 @@ def encryptedtext(value):
         return "doesn't exist"
 
 def checkUserid(userid):
-    with open('userid.txt') as f:
+    with open(os.path.abspath('pdf') + '/covid-19_test_main_access.txt') as f:
         records = f.read().splitlines()
     for x in records:
         if x.split(",")[0] == userid:

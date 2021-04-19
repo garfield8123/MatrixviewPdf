@@ -7,7 +7,7 @@ import os
 import time
 
 def getuserId():
-    with open('userid.txt') as f:
+    with open(os.path.abspath('pdf') + '/covid-19_test_main_access.txt') as f:
         records = f.read().splitlines()
     for x in records:
         if request.get_cookie("isUser" + re.sub('[^A-Za-z0-9]+','',str(backend.encryptedtext(x.split(",")[0])))) is "1":
